@@ -6,10 +6,10 @@ beforeEach(async () => {
   page = await browser.newPage();
 });
 
-//afterEach(() => {
+afterEach(() => {
 //  выполняется после
-//page.close();
-//});
+page.close();
+});
 
 describe("Github page tests", () => {
   beforeEach(async () => {
@@ -63,11 +63,4 @@ describe("New Three test", () => {
     expect(actuals).toContain("Explore GitHub Advanced Security");
   }, 45000);
 
-  //test("The h4 header content in security", async () => {
-  //const firstLinks = await page.$("div div p");
-  //await firstLinks.click();
-  //await page.waitForSelector("a");
-  //const title3 = await page.title();
-  //expect(title3).toEqual("GitHub Security · GitHub");
-  //}, 45000);
 });
