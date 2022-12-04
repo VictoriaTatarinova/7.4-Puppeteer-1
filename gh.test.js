@@ -15,8 +15,6 @@ describe("Github page tests", () => {
   beforeEach(async () => {
     await page.goto("https://github.com/team");
   });
-  afterEach(() => {
-    page.close();
   });
 
   test("The h1 header content'", async () => {
