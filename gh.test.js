@@ -15,7 +15,6 @@ describe("Github page tests", () => {
   beforeEach(async () => {
     await page.goto("https://github.com/team");
   });
-  });
 
   test("The h1 header content'", async () => {
     const firstLink = await page.$("header div div a");
@@ -42,9 +41,6 @@ describe("Github page tests", () => {
 describe("New Three test", () => {
   beforeEach(async () => {
     await page.goto("https://github.com/security");
-  });
-  afterEach(() => {
-    page.close();
   });
 
   test("The first link attribute in security", async () => {
